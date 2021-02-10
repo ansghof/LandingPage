@@ -55,24 +55,8 @@ function isElementPartiallyInViewport(el) {
 
 /* highlight section by adding a class if the element is in viewport (functions copied from stackoverflow) */
 function onScrollHighlightActiveSection() {
-  // console.log("scroll event received");
-  // for (section of sections) {
-  //   const navbarElement = document.querySelector(
-  //     "#li" + section.getAttribute("id")
-  //   );
-  //   if (isElementPartiallyInViewport(section.parentElement)) {
-  //     section.parentElement.classList.add("section-currentlyactive");
-  //     navbarElement.classList.add("navbar-listitem-active");
-  //   } else {
-  //     section.parentElement.classList.remove("section-currentlyactive");
-  //   }
-  // }
-
   // use conventional for loop to be able to use the index for selection of the navbar Elements;
   for (let index = 0; index < sections.length; index++) {
-    // const navbarElement = document.querySelector(
-    //   "#li" + sections[index].getAttribute("id")
-    // );
     if (isElementPartiallyInViewport(sections[index].parentElement)) {
       sections[index].parentElement.classList.add("section-currentlyactive");
       menuItems[index].classList.add("navbar-listitem-active");

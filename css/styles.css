@@ -43,8 +43,7 @@ html {
 }
 
 .navbar-listitem-active {
-  background-color: darkblue;
-  color: lightgrey;
+  border: 2px solid red;
 }
 
 .navbar-listitem:hover {
