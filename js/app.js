@@ -40,7 +40,6 @@ function isElementPartiallyInViewport(el) {
   const waitFromTop = 150;
   const waitFromBottom = 250;
   var rect = el.getBoundingClientRect();
-  // DOMRect { x: 8, y: 8, width: 100, height: 100, top: 8, right: 108, bottom: 108, left: 8 }
   var windowHeight =
     window.innerHeight || document.documentElement.clientHeight;
   var windowWidth = window.innerWidth || document.documentElement.clientWidth;
