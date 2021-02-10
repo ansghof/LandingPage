@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.section {
+  padding-bottom: 200px;
+}
+
 .section-header {
   padding-top: 100px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -11,7 +15,6 @@ html {
 .section-paragraph {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 12px;
-  height: auto;
 }
 
 .navbar-list {
