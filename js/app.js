@@ -11,15 +11,18 @@ function printSectionInfo() {
 
 function addSectionsToNav(sections) {
   for (section of sections) {
-    let li = document.createElement("li");
-    li.setAttribute("id", "li" + section.getAttribute("id"));
     let link = document.createElement("a");
     link.setAttribute("href", "#" + section.getAttribute("id"));
     link.textContent = section.getAttribute("data-navtitle");
     link.classList.add("navbar-link");
-    link.addEventListener("click", onClickNavItem);
+    link.addEventListener("click", onClickNavItem(section));
+
+    let li = document.createElement("li");
+    li.setAttribute("id", "li" + section.getAttribute("id"));
     li.classList.add("navbar-listitem");
+
     li.appendChild(link);
+
     menuList.appendChild(li);
     menuItems.push(li);
   }
