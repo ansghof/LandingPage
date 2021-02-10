@@ -9,6 +9,7 @@ function printSectionInfo() {
   }
 }
 
+/* creates the navbar and adds a a href to each of them with a click handler */
 function addSectionsToNav(sections) {
   for (section of sections) {
     let link = document.createElement("a");
@@ -33,7 +34,7 @@ here a click handler to scroll to the section and preventing the working default
 function onClickNavItem(event) {
   console.log("Click " + event);
   if (event.target != null) {
-    event.target.scrollToLocation();
+    event.target.parentNode.scrollToLocation();
     event.preventDefault();
   }
 }
