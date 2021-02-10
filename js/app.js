@@ -39,15 +39,15 @@ function onClickNavItem(event) {
 function isElementPartiallyInViewport(el) {
   const waitFromTop = 150;
   const waitFromBottom = 250;
-  var rect = el.getBoundingClientRect();
-  var windowHeight =
+  let rect = el.getBoundingClientRect();
+  let windowHeight =
     window.innerHeight || document.documentElement.clientHeight;
-  var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+  let windowWidth = window.innerWidth || document.documentElement.clientWidth;
 
-  var vertInView =
+  let vertInView =
     rect.top + waitFromTop <= windowHeight &&
     rect.top + rect.height >= waitFromBottom;
-  var horInView = rect.left <= windowWidth && rect.left + rect.width >= 0;
+  let horInView = rect.left <= windowWidth && rect.left + rect.width >= 0;
 
   return vertInView && horInView;
 }
@@ -66,7 +66,7 @@ function onScrollHighlightActiveSection() {
   }
 }
 
-printSectionInfo();
+// printSectionInfo();
 
 addSectionsToNav(sections);
 
